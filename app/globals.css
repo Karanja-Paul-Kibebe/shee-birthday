@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #121212;
+  color: #f7e7ce;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #b76e79;
+  color: white;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at top, rgba(183, 110, 121, 0.12), transparent 40%),
+    radial-gradient(
+      circle at bottom,
+      rgba(247, 231, 206, 0.06),
+      transparent 40%
+    );
+  pointer-events: none;
+  z-index: -1;
+}
+body {
+  cursor: none;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  background: #121212;
+}
+
+.glow-text {
+  text-shadow:
+    0 0 10px rgba(247, 231, 206, 0.8),
+    0 0 20px rgba(247, 231, 206, 0.6),
+    0 0 40px rgba(183, 110, 121, 0.5);
+}
+
+.luxury-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(247, 231, 206, 0.08);
+  backdrop-filter: blur(18px);
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#b76e79, #f7e7ce);
+  border-radius: 999px;
+}
+
+.fade-top {
+  mask-image: linear-gradient(to bottom, transparent, black 15%);
+}
+
+.fade-bottom {
+  mask-image: linear-gradient(to top, transparent, black 15%);
+}
