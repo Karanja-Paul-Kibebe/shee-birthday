@@ -9,6 +9,7 @@ const memories = [
   "Beautiful memories forever 🌸",
   "Keep shining always ⭐",
   "The world is brighter with you 💖",
+  "Baraka in everything unafanya 💫",
 ];
 
 export default function MemoryVault() {
@@ -21,7 +22,7 @@ export default function MemoryVault() {
           transition={{ duration: 1 }}
           className="mb-20 text-center text-5xl font-black text-[#F7E7CE] md:text-7xl"
         >
-          Memory Vault
+          Wishes😘😘
         </motion.h1>
 
         <div className="grid gap-8 md:grid-cols-3">

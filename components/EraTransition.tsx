@@ -1,7 +1,23 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useState } from "react";
+
+function AnimatedCounter() {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (val) => Math.floor(val));
+
+  useEffect(() => {
+    const controls = animate(count, [0, 10, 15, 18], {
+      duration: 3,
+      times: [0, 0.4, 0.75, 1],
+      ease: "linear",
+    });
+    return controls.stop;
+  }, [count]);
+
+  return <motion.span className="inline-block">{rounded}</motion.span>;
+}
 
 export default function EraTransition() {
   const [show18, setShow18] = useState(false);
@@ -76,7 +92,7 @@ export default function EraTransition() {
             }}
             className="text-[10rem] font-black text-[#B76E79] md:text-[18rem]"
           >
-            18
+            <AnimatedCounter /> YEARS
           </motion.h1>
 
           <motion.p

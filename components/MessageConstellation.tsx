@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 
 const messages = [
+  "Yooowh, ebu jibambe leo ni siku yako 🫵😉😂✨",
   "Never stop dreaming ✨",
   "You were born to shine 🌟",
   "18 looks magical on you 💖",
